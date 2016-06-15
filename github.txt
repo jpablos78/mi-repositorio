@@ -1,0 +1,55 @@
+https://git-scm.com/
+
+Instalar github
+
+ver si github esta correctamente instalado
+1) abrir git-bash se abre una ventana de comandos
+2) escribir: git --version
+   se debe presentar la version instalada de github
+   
+definir parametros generales en git
+en la ventana de comandos definir un email y nombre de usuario
+1) git config --global user.email "you@example.com"
+2) git config --global user.name "Your Name"
+   
+trabajar con github en local
+1) abrir git-bash se abre una ventana de comandos
+2) ubicar la carpeta en la que queremos crear el repostorio
+3) en la ventana de comandos tipear 'cd' y arrastrar la carpeta a la ventana de comandos (o localizarla manualmente desde la ventana de comandos) - enter
+4) tipear git init (con esto se inicializa un repositorio dentro de esta carpeta)
+   si ingresamos a la carpeta se veran los archivos que se crearon por el repositorio, si no se los ven es porque estan ocultos, para verlos 
+   ir a organizar - opciones de carpeta y busqueda - ver - mostrar archivos, carpetas unidades ocultas - aceptar
+   
+git status (sirve para ver el estado actual del repositorio, ver si esta sincronizado o no)
+si agregamos un archivo, y se digita git status se mostrara que el repositorio no se encuetra actualizado
+
+
+git add . (anade todos los archivos que no estan sincronizados con el repositorio actual)
+git add *.html (solo anade los archivos con extencion html)
+
+luego de agregar los datos se debe actualizar el repositorio
+
+git commit (actualizar el repositorio)
+git commit -m "mensaje" (actualizar el repositorio con un mensaje)
+
+cuando se modifica un archivo
+git status (presentara los archivos que esten modificados)
+git add file.txt (agregara el archivo modificado al repositorio)
+git status (indicara que el archivo modificado esta ingresado en el repositorio, pero el repositorio no esta actualizado todavia)
+git commit -m "actualiza archivo" (actualizar el repositorio con un mensaje)
+
+eliminacion de archivos
+eliminar un archivo/carpeta de la carpeta donde esta nuestro repositorio file-eliminado.txt
+git status (indica que hay archivos eliminados file-eliminado.txt)
+git add file-eliminado.txt (se le indica al repositorio que el archivo file-eliminado.txt se agregara a los cambios o sea se borrara)
+git status (indica que el repostorio se actualizo el cambio en donde se elimina el archivo file-eliminado.txt)
+git commit -m "actualizando repositorio despues de eliminar fisicamente archivo file-eliminado.txt" (actualiza el repositorio con un mensaje)
+
+actualizar un repostorio local a github
+1) ingresar a nuestra cuenta de github
+2) crear un nuevo repositorio
+3) copiar la linea en donde indica la direccion de nuestro repositorio en github
+   git remote add origin https://github.com/jpablos78/mi-repositorio.git
+   git push -u origin master
+4) poner nombre de usuario y clave de github
+5) revisar el repositorio   
